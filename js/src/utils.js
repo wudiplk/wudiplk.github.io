@@ -159,7 +159,7 @@ NexT.utils = NexT.$u = {
         wrap.style.position = 'relative';
         wrap.style.marginBottom = '20px';
         wrap.style.width = '100%';
-        wrap.style.paddingTop = videoRatio + '%';
+        wrap.style.paddingTop ="80px";
         // Fix for appear inside tabs tag.
         (wrap.style.paddingTop === '') && (wrap.style.paddingTop = '50%');
 
