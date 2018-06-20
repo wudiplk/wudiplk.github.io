@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Beijing]]></title>
-    <url>%2F2018%2F06%2F15%2FBeijing%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <title><![CDATA[我的第一篇技术贴]]></title>
+    <url>%2F2018%2F06%2F19%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%8A%80%E6%9C%AF%E8%B4%B4%2F</url>
+    <content type="text"><![CDATA[我的第一次开发日志]]></content>
+      <categories>
+        <category>分享</category>
+        <category>two</category>
+      </categories>
+      <tags>
+        <tag>技术文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇文章]]></title>
+    <url>%2F2018%2F06%2F19%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[我的第一篇文章我的二篇文章我的第九页也问他还在那 我的梦的是显示打法飞机安防监控链接发卡付款jafkjsklfkadf fkadjksfjkdjkjasdjflkjkdjskfkaj 我的梦去开发 的空气 北京的天气十分讨厌 北京欢迎你 雨果的作家adskfkajfslkjklaj海因执行地球 亚洲 中国 广东 广州梅州深圳广州 广州|每周|深圳 :—–|—–:|:–: 1|2|3 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118package com.gzjiequan.rescuewithyou.rescuespot.video;import android.os.Bundle;import android.view.SurfaceView;import android.view.View;import android.widget.Button;import android.widget.LinearLayout;import com.gzjiequan.rescuewithyou.R;import com.gzjiequan.rescuewithyou.base.App;import com.gzjiequan.rescuewithyou.base.BaseActivity;import com.gzjiequan.rescuewithyou.util.LogUtil;import com.gzjiequan.rescuewithyou.util.ToastUtil;import butterknife.BindView;import butterknife.ButterKnife;import io.agora.rtc.Constants;import io.agora.rtc.IRtcEngineEventHandler;import io.agora.rtc.RtcEngine;import io.agora.rtc.video.VideoCanvas;public class SpotVideoActivity extends BaseActivity &#123; @BindView(R.id.btFinish) Button btFinish; @BindView(R.id.btJoin) Button btJoin; @BindView(R.id.llVideoLoc) LinearLayout llVideoLoc; @BindView(R.id.llVideoRemote) LinearLayout llVideoRemote; private RtcEngine rtcEngine; @Override protected int getContentViewId() &#123; return R.layout.activity_spot_video; &#125; @Override protected void initView(Bundle savedInstanceState) &#123; if (rtcEngine != null) &#123; return; &#125; try &#123; rtcEngine = RtcEngine.create(App.getInstance().getApplicationContext(), &quot;f88d96cb86394031b7698883369b1b3c&quot;, new IRtcEngineEventHandler() &#123; @Override public void onJoinChannelSuccess(String channel, int uid, int elapsed) &#123; super.onJoinChannelSuccess(&quot;onJoinChannelSuccess&quot;, uid, elapsed); LogUtil.d(TAG, channel + &quot; uid:&quot; + uid); &#125; @Override public void onFirstRemoteVideoDecoded(int uid, int width, int height, int elapsed) &#123; ToastUtil.showMessage(&quot;onFirstRemoteVideoDecoded&quot; + &quot; uid:&quot; + uid); &#125; &#125;); //打开视频模式 rtcEngine.enableVideo(); rtcEngine.disableAudio(); rtcEngine.setVideoProfile(Constants.VIDEO_PROFILE_360P, false); rtcEngine.joinChannel(null, &quot;beijing&quot;, null, 1); SurfaceView asvVideoLoc = rtcEngine.CreateRendererView(App.getInstance().getApplicationContext()); rtcEngine.setupLocalVideo(new VideoCanvas(asvVideoLoc, VideoCanvas.RENDER_MODE_HIDDEN, 1)); llVideoLoc.addView(asvVideoLoc); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; btFinish.setOnClickListener(new View.OnClickListener() &#123; @Override public void onClick(View v) &#123; if (rtcEngine != null) &#123; rtcEngine.leaveChannel(); finish(); &#125; &#125; &#125;); btJoin.setOnClickListener(new View.OnClickListener() &#123; @Override public void onClick(View v) &#123; SurfaceView asvVideoRemote = rtcEngine.CreateRendererView(App.getInstance().getApplicationContext()); rtcEngine.setupRemoteVideo(new VideoCanvas(asvVideoRemote, VideoCanvas.RENDER_MODE_HIDDEN, 2)); llVideoRemote.addView(asvVideoRemote); &#125; &#125;); &#125; @Override protected void onCreate(Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); // TODO: add setContentView(...) invocation ButterKnife.bind(this); &#125; @Override protected void onDestroy() &#123; if (rtcEngine != null) &#123; rtcEngine.leaveChannel(); &#125; super.onDestroy(); &#125; @Override public void onBackPressed() &#123; if (rtcEngine != null) &#123; rtcEngine.leaveChannel(); &#125; super.onBackPressed(); &#125;&#125;]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>技术第一</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
