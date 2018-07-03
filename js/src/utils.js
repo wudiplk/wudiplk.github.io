@@ -7,14 +7,14 @@ NexT.utils = NexT.$u = {
   wrapImageWithFancyBox: function () {
     $('.content img')
       .not('[hidden]')
-      .not('.group-picture img, .post-gallery img')
+      .not('.group-picture img, .post-gallery img, img.' + CONFIG.emojis.className)
       .each(function () {
         var $image = $(this);
         var imageTitle = $image.attr('title');
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
-	        var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
+          var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
           $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
         }
 
