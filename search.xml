@@ -41,4 +41,24 @@
     <url>%2F2018%2F05%2F31%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. ¶Quick Start ¶Create a new post 1$ hexo new "My New Post" More info: Writing ¶Run server 1$ hexo server More info: Server ¶Generate static files 1$ hexo generate More info: Generating ¶Deploy to remote sites 1$ hexo deploy More info: Deployment]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>%2FREADME.html</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[关于]]></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[这就是我，你想知道的我 E-Mail:wudiplk@163.com GitHub:github.com/wudiplk MyBlog:www.wudiplk.top 关于名字 😏plk 普朗克常量（6.62607004 × 10-34 m2 kg / s） 关于写个人博客的，纯属闷骚（PS:语文渣渣一枚），也就想写写文章，分享些东西给大家，也总结总结，记录些东西毕竟时间转眼即逝~ Steam 用户 WeGame用户 喜欢玩国产单机游戏 侠客风云传、古剑、仙剑。对于吃鸡等网游、手游真带不起劲儿来来。 心中的游戏神作：仙剑四（把懵懂的我感动了）、文明6(只有永远的下一回合，史诗级巨作、上下五千年有你不知道历史)、塞尔达传说（这个游戏就用说了 超级开放的世界，就差和塞尔达公主结婚生孩子了😏，喜欢玩的朋友可以加我好友 喜欢动漫，大部分神作都看过也很喜欢，比如命运石之门、死亡笔记，还有魔法少女小圆（4：3圆脸也这么好看，强力推荐，想看朋友别被他骗了 老虚出品，必属精品，广告一波~） 电影嘛，这个几句话说不玩了了，有空会写一篇关于电影的文章，不管是爱情、科幻、动作都喜欢，言之不尽。 喜欢跑步、羽毛球 音乐吧也就是个木耳~，有空没事也就捣鼓捣鼓电脑、帮同事盆友一键还原bingo]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[分类]]></title>
+    <url>%2Fcategories%2Findex.html</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[标签]]></title>
+    <url>%2Ftags%2Findex.html</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
 </search>
