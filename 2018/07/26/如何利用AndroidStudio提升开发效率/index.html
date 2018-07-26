@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*��������ɫ*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*��Ӱ��ɫ*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*�ϱ߿���ɫ*/
+        border-left-color: #1E92FB;    /*��߿���ɫ*/
+    }
+</style>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lightbulb-idea-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lightbulb-idea-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="开发效率," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言 对比Eclipse 、Intelij IDEA来说，AndroidStudio无疑是个强大工具，虽然Eclipse、IntellijIEDA都能开发Android，但是效用方面不能比的。介绍一下AndroidStudio常用的快捷键和一些常用的插件来 提升我们的开发效率；有任何好的提议，请大家在评论区留言。 ¶如何添加AndroidStudio插件 进入Android’Studio界面-&amp;g">
+<meta name="keywords" content="开发效率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何利用AndroidStudio提升开发效率">
+<meta property="og:url" content="http://wudiplk.top/2018/07/26/如何利用AndroidStudio提升开发效率/index.html">
+<meta property="og:site_name" content="wudiplk">
+<meta property="og:description" content="前言 对比Eclipse 、Intelij IDEA来说，AndroidStudio无疑是个强大工具，虽然Eclipse、IntellijIEDA都能开发Android，但是效用方面不能比的。介绍一下AndroidStudio常用的快捷键和一些常用的插件来 提升我们的开发效率；有任何好的提议，请大家在评论区留言。 ¶如何添加AndroidStudio插件 进入Android’Studio界面-&amp;g">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins0.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins1.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins2.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins3.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins4.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins5.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins6.png">
+<meta property="og:image" content="http://wudiplk.top/uploads/20180711/plugins7.png">
+<meta property="og:updated_time" content="2018-07-26T06:41:58.098Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何利用AndroidStudio提升开发效率">
+<meta name="twitter:description" content="前言 对比Eclipse 、Intelij IDEA来说，AndroidStudio无疑是个强大工具，虽然Eclipse、IntellijIEDA都能开发Android，但是效用方面不能比的。介绍一下AndroidStudio常用的快捷键和一些常用的插件来 提升我们的开发效率；有任何好的提议，请大家在评论区留言。 ¶如何添加AndroidStudio插件 进入Android’Studio界面-&amp;g">
+<meta name="twitter:image" content="http://wudiplk.top/uploads/20180711/plugins0.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+     emojis: {
+           className: 'github-emoji'
+     },
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wudiplk.top/2018/07/26/如何利用AndroidStudio提升开发效率/"/>
+
+
+
+
+
+  <title>如何利用AndroidStudio提升开发效率 | wudiplk</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">wudiplk</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wudiplk.top/2018/07/26/如何利用AndroidStudio提升开发效率/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wudiplk">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wudiplk">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何利用AndroidStudio提升开发效率</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T14:34:39+08:00">
+                2018-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/26/如何利用AndroidStudio提升开发效率/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/26/如何利用AndroidStudio提升开发效率/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,004
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1>前言</h1>
+<p>对比Eclipse 、Intelij IDEA来说，AndroidStudio无疑是个强大工具，虽然Eclipse、IntellijIEDA都能开发Android，但是效用方面不能比的。介绍一下AndroidStudio常用的快捷键和一些常用的插件来<br>
+提升我们的开发效率；有任何好的提议，请大家在评论区留言。</p>
+<h2 id="如何添加androidstudio插件"><a class="header-anchor" href="#如何添加androidstudio插件">¶</a>如何添加AndroidStudio插件</h2>
+<p>进入Android’Studio界面-&gt;File-&gt;Setting<br>
+<img src="/uploads/20180711/plugins0.png" alt="添加AndroidStudio插件"></p>
+<h2 id="androidstudio常用的插件"><a class="header-anchor" href="#androidstudio常用的插件">¶</a>AndroidStudio常用的插件</h2>
+<ol>
+<li>
+<p>GsonFormat 快速吧Json转换为Class对象，免去了我们手动敲代码JavaBean（推荐指数 五星）<br>
+<img src="/uploads/20180711/plugins1.png" alt="GsonFormat图示"><br>
+有时候会出现错误，这就要求我们的json数据格式的正确了，可以用下面网址（有很多小工具类型）进行校对<br>
+<a href="https://www.sojson.com/" target="_blank" rel="noopener">https://www.sojson.com/</a><br>
+2.Android ButterKnife Zelezny 用于绑定控件，再也不用findViewById了（推荐指数 五星）<br>
+前提是先继承Android ButterKnife<br>
+<a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="noopener">https://github.com/JakeWharton/butterknife</a><br>
+<img src="/uploads/20180711/plugins2.png" alt="Android ButterKnife Zelezny"><br>
+<img src="/uploads/20180711/plugins3.png" alt="Android ButterKnife Zelezny"></p>
+</li>
+<li>
+<p>Android Parcelable code generator JavaBean序列化，快速实现Parcelable接口。<br>
+使用方法点击空白处右击Parcelable</p>
+</li>
+<li>
+<p>Android ADB WIFI，手机可以连接wifi调试 （推荐指数 三星）<br>
+<img src="/uploads/20180711/plugins4.png" alt="Android ButterKnife Zelezny"><br>
+先用数据线连接，点击wifi调试，然后断开数据线即可远程调试</p>
+</li>
+<li>
+<p>Android Drawable Importer （推荐指数 五星）<br>
+这是一个非常强大的图片导入插件。它导入Android图标与Material图标的Drawable ，批量导入Drawable ，多源导入Drawable（即导入某张图片各种dpi对应的图片）<br>
+<img src="/uploads/20180711/plugins5.png" alt="Android ButterKnife Zelezny"></p>
+</li>
+<li>
+<p>Translation 翻译插件（推荐指数 四星）<br>
+对于查看源码和英语不好的同学来说，还是很不错的，比起有道和金山内嵌的实用性比较高</p>
+</li>
+<li>
+<p>Alibaba Java Coding Guidelines 编码规范（推荐指数 四星）<br>
+对于新手来说或者其他转行而来的同学来说，这个还是很不错的，不仅让自己代码美观，规范自己的编码水平，有利于团队协作和以后的阅读</p>
+</li>
+</ol>
+<h2 id="android-studio-常用快捷键"><a class="header-anchor" href="#android-studio-常用快捷键">¶</a>Android Studio 常用快捷键</h2>
+<p>1.The File Structure Popup<br>
+ctrl+f12此快捷键可以调出当前文件的大纲，并通过模糊匹配快速跳转至指定的方法。跟点击展开左边Structure侧滑栏效果一样，不过我喜欢直接展开Structure策划栏<br>
+对于笔记本来说F12有点难；<br>
+<img src="/uploads/20180711/plugins6.png" alt="Android ButterKnife Zelezny"><br>
+<img src="/uploads/20180711/plugins7.png" alt="Android ButterKnife Zelezny"></p>
+<ol start="2">
+<li>代码上下切换<br>
+alt+shift+up/down<br>
+上下移动行，这个没什么好说的，肯定会用到。必须的</li>
+<li>全局搜索<br>
+ctrl+shift+f<br>
+想搜啥就搜啥，强烈推荐</li>
+<li>当前页面查询<br>
+ctrl+f</li>
+</ol>
+<p>5 替换代码<br>
+ctrl+r<br>
+还是很不多的必备快捷家</p>
+<ol start="6">
+<li>
+<p>json转换bean(必须先安装插件GsonFormat)<br>
+alt+s</p>
+</li>
+<li>
+<p>代码注释<br>
+ctrl+/ 用于单行注释<br>
+ctrl+shift+/用于多行注释</p>
+</li>
+</ol>
+<h2 id="附录快捷键表"><a class="header-anchor" href="#附录快捷键表">¶</a>附录快捷键表</h2>
+<h3 id="ide"><a class="header-anchor" href="#ide">¶</a>IDE</h3>
+<p>按键	说明<br>
+F1	帮助<br>
+Alt(Option)+F1	查找文件所在目录位置<br>
+Alt(Option)+1	快速打开或隐藏工程面板<br>
+Ctrl(Command)+Alt(Option)+	打开设置对话框<br>
+Alt(Option)+Home	跳转到导航栏<br>
+Esc	光标返回编辑框<br>
+Shift+Esc	光标返回编辑框,关闭无用的窗口<br>
+Shift+Click	关闭标签页<br>
+F12	把焦点从编辑器移到最近使用的工具窗口<br>
+Ctrl(Command)+Alt(Option)+Y	同步<br>
+Ctrl(Command)+Alt(Option)+S	打开设置对话框<br>
+Alt(Option)+Shift+Inert	开启/关闭列选择模式<br>
+Ctrl(Command)+Alt(Option)+Shift+S	打开当前项目/模块属性<br>
+Alt(Option)+Shift+C	查看文件的变更历史<br>
+Ctrl(Command)+Shift+F10	运行<br>
+Ctrl(Command)+Shift+F9	debug运行<br>
+Ctrl(Command)+Alt(Option)+F12	资源管理器打开文件夹</p>
+<h3 id="编辑"><a class="header-anchor" href="#编辑">¶</a>编辑</h3>
+<p>按键	说明<br>
+Ctrl(Command)+C	复制当前行或选中的内容<br>
+Ctrl(Command)+D	粘贴当前行或选中的内容<br>
+Ctrl(Command)+X	剪切当前行或选中的内容<br>
+Ctrl(Command)+Y	删除行<br>
+Ctrl(Command)+Z	倒退<br>
+Ctrl(Command)+Shift+Z	向前<br>
+Alt(Option)+Enter	自动修正<br>
+Ctrl(Command)+Alt(Option)+L	格式化代码<br>
+Ctrl(Command)+Alt(Option)+I	将选中的代码进行自动缩进编排<br>
+Ctrl(Command)+Alt(Option)+O	优化导入的类和包<br>
+Alt(Option)+Insert	得到一些Intention Action，可以生成构造器、Getter、Setter、将 == 改为 equals() 等<br>
+Ctrl(Command)+Shift+V	选最近使用的剪贴板内容并插入<br>
+Ctrl(Command)+Alt(Option)+Shift+V	简单粘贴<br>
+Ctrl(Command)+Shift+Insert	选最近使用的剪贴板内容并插入（同Ctrl(Command)+Shift+V）<br>
+Ctrl(Command)+Enter	在当前行的上面插入新行，并移动光标到新行（此功能光标在行首时有效）<br>
+Shift+Enter	在当前行的下面插入新行，并移动光标到新行<br>
+Ctrl(Command)+J	自动代码<br>
+Ctrl(Command)+Alt(Option)+T	把选中的代码放在 try{} 、if{} 、 else{} 里<br>
+Shift+Alt(Option)+Insert	竖编辑模式<br>
+Ctrl(Command)+ /	注释 //<br>
+Ctrl(Command)+Shift+ /	注释 /…/<br>
+Ctrl(Command)+Shift+J	合并成一行<br>
+F2/Shift+F2	跳转到下/上一个错误语句处<br>
+Ctrl(Command)+Shift+Back	跳转到上次编辑的地方<br>
+Ctrl(Command)+Alt(Option)+Space	类名自动完成<br>
+Shift+Alt(Option)+Up/Down	内容向上/下移动<br>
+Ctrl(Command)+Shift+Up/Down	语句向上/下移动<br>
+Ctrl(Command)+Shift+U	大小写切换<br>
+Tab	代码标签输入完成后，按 Tab，生成代码<br>
+Ctrl(Command)+Backspace	按单词删除<br>
+Ctrl(Command)+Shift+Enter	语句完成<br>
+Ctrl(Command)+Alt(Option)+J	用动态模板环绕</p>
+<h3 id="文件"><a class="header-anchor" href="#文件">¶</a>文件</h3>
+<p>按键	说明<br>
+Ctrl(Command)+F12	显示当前文件的结构<br>
+Ctrl(Command)+H	显示类继承结构图<br>
+Ctrl(Command)+Q	显示注释文档<br>
+Ctrl(Command)+P	方法参数提示<br>
+Ctrl(Command)+U	打开当前类的父类或者实现的接口<br>
+Alt(Option)+Left/Right	切换代码视图<br>
+Ctrl(Command)+Alt(Option)+Left/Right	返回上次编辑的位置<br>
+Alt(Option)+Up/Down	在方法间快速移动定位<br>
+Ctrl(Command)+B	快速打开光标处的类或方法<br>
+Ctrl(Command)+W	选中代码，连续按会有其他效果<br>
+Ctrl(Command)+Shift+W	取消选择光标所在词<br>
+Ctrl(Command)+ - / +	折叠/展开代码<br>
+Ctrl(Command)+Shift+ - / +	折叠/展开全部代码<br>
+Ctrl(Command)+Shift+.	折叠/展开当前花括号中的代码<br>
+Ctrl(Command)+ ] / [	跳转到代码块结束/开始处<br>
+F2 或 Shift+F2	高亮错误或警告快速定位<br>
+Ctrl(Command)+Shift+C	复制路径<br>
+Ctrl(Command)+Alt(Option)+Shift+C	复制引用，必须选择类名<br>
+Alt(Option)+Up/Down	在方法间快速移动定位<br>
+Shift+F1	要打开编辑器光标字符处使用的类或者方法 Java 文档的浏览器<br>
+Ctrl(Command)+G	定位行</p>
+<h3 id="查找"><a class="header-anchor" href="#查找">¶</a>查找</h3>
+<p>按键	说明<br>
+Ctrl(Command)+F	在当前窗口查找文本<br>
+Ctrl(Command)+Shift+F	在指定环境下查找文本<br>
+F3	向下查找关键字出现位置<br>
+Shift+F3	向上一个关键字出现位置<br>
+Ctrl(Command)+R	在当前窗口替换文本<br>
+Ctrl(Command)+Shift+R	在指定窗口替换文本<br>
+Ctrl(Command)+N	查找类<br>
+Ctrl(Command)+Shift+N	查找文件<br>
+Ctrl(Command)+Shift+Alt(Option)+N	查找项目中的方法或变量<br>
+Ctrl(Command)+B	查找变量的来源<br>
+Ctrl(Command)+Alt(Option)+B	快速打开光标处的类或方法<br>
+Ctrl(Command)+Shift+B	跳转到类或方法实现处<br>
+Ctrl(Command)+E	最近打开的文件<br>
+Alt(Option)+F3	快速查找，效果和Ctrl(Command)+F相同<br>
+F4	跳转至定义变量的位置<br>
+Alt(Option)+F7	查询当前元素在工程中的引用<br>
+Ctrl(Command)+F7	查询当前元素在当前文件中的引用，然后按 F3 可以选择<br>
+Ctrl(Command)+Alt(Option)+F7	选中查询当前元素在工程中的引用<br>
+Ctrl(Command)+Shift+F7	高亮显示匹配的字符，按 Esc 高亮消失<br>
+Ctrl(Command)+Alt(Option)+F7	查找某个方法的所有调用地方<br>
+Ctrl(Command)+Shift+Alt(Option)+N	查找类中的方法或变量<br>
+Ctrl(Command)+Shift+O	弹出显示查找内容<br>
+Ctrl(Command)+Alt(Option)+Up/Down	快速跳转搜索结果<br>
+Ctrl(Command)+Shift+S	高级搜索、搜索结构</p>
+<h3 id="重构"><a class="header-anchor" href="#重构">¶</a>重构</h3>
+<p>按键	说明<br>
+F5	复制<br>
+F6	移动<br>
+Alt(Option)+Delete	安全删除<br>
+Ctrl(Command)+U	转到父类<br>
+Ctrl(Command)+O	重写父类的方法<br>
+Ctrl(Command)+I	实现方法<br>
+Ctrl(Command)+Alt(Option)+N	内联<br>
+Ctrl(Command)+Alt(Option)+Shift+T	弹出重构菜单<br>
+Shift+F6	重构-重命名<br>
+Ctrl(Command)+Alt(Option)+M	提取代码组成方法<br>
+Ctrl(Command)+Alt(Option)+C	将变量更改为常量<br>
+Ctrl(Command)+Alt(Option)+V	定义变量引用当前对象或者方法的返回值<br>
+Ctrl(Command)+Alt(Option)+F	将局部变量更改为类的成员变量<br>
+Ctrl(Command)+Alt(Option)+P	将变量更改为方法的参数</p>
+<h3 id="调试"><a class="header-anchor" href="#调试">¶</a>调试</h3>
+<p>按键	说明<br>
+F8	跳到下一步<br>
+Shift+F8	跳出函数、跳到下一个断点<br>
+Alt(Option)+Shift+F8	强制跳出函数<br>
+F7	进入代码<br>
+Shift+F7	智能进入代码<br>
+Alt(Option)+Shift+F7	强制进入代码<br>
+Alt(Option)+F9	运行至光标处<br>
+Ctrl(Command)+Alt(Option)+F9	强制运行至光标处<br>
+Ctrl(Command)+F2	停止运行<br>
+Alt(Option)+F8	计算变量值</p>
+<h2 id="常用window-快捷键"><a class="header-anchor" href="#常用window-快捷键">¶</a>常用Window 快捷键</h2>
+<h3 id="复制-粘贴及其他常规的键盘快捷方式"><a class="header-anchor" href="#复制-粘贴及其他常规的键盘快捷方式">¶</a>复制、粘贴及其他常规的键盘快捷方式</h3>
+<p>Ctrl + X	剪切选定项<br>
+Ctrl + C（或 Ctrl + Insert）	复制选定项<br>
+Ctrl + V（或 Shift + Insert）	粘贴选定项<br>
+Ctrl + Z	撤消操作<br>
+Alt + Tab	在打开的应用之间切换<br>
+Alt + F4	关闭活动项，或者退出活动应用<br>
+Windows 徽标键  + L	锁定你的电脑<br>
+Windows 徽标键  + D	显示和隐藏桌面<br>
+F2	重命名选定项<br>
+F3	在文件资源管理器中搜索文件或文件夹<br>
+F4	在文件资源管理器中显示地址栏列表<br>
+F5	刷新活动窗口<br>
+F6	循环浏览窗口中或桌面上的屏幕元素<br>
+F10	激活活动应用中的菜单栏<br>
+Alt + F8	在登录屏幕上显示你的密码<br>
+Alt + Esc	按项目打开顺序循环浏览<br>
+Alt + 带下划线的字母	执行该字母相关的命令<br>
+Alt + Enter	显示所选项目的属性<br>
+Alt + 空格键	打开活动窗口的快捷方式菜单<br>
+Alt + 向左键	返回<br>
+Alt + 向右键	前进<br>
+Alt + Page Up	向上移动一个屏幕<br>
+Alt + Page Down	向下移动一个屏幕<br>
+Ctrl + F4	关闭活动文档（在可全屏显示并允许你同时打开多个文档的应用中）<br>
+Ctrl + A	选择文档或窗口中的所有项目<br>
+Ctrl + D（或 Delete）	删除所选的项目，将其移至回收站<br>
+Ctrl + R（或 F5）	刷新活动窗口<br>
+Ctrl + Y	恢复操作<br>
+Ctrl + 向右键	将光标移动到下一个字词的起始处<br>
+Ctrl + 向左键	将光标移动到上一个字词的起始处<br>
+Ctrl + 向下键	将光标移动到下一段落的起始处<br>
+Ctrl + 向上键	将光标移动到上一段落的起始处<br>
+Ctrl + Alt + Tab	使用箭头键在所有打开的应用之间进行切换<br>
+Alt + Shift + 箭头键	当组或磁贴的焦点放在“开始”菜单上时，可将其朝指定方向移动<br>
+Ctrl + Shift + 箭头键	当磁贴的焦点放在“开始”菜单上时，将其移到另一个磁贴即可创建一个文件夹<br>
+Ctrl + 箭头键	打开“开始”菜单后调整其大小<br>
+Ctrl + 箭头键（移至某个项目）+ 空格键	选择窗口中或桌面上的多个单独项目<br>
+Ctrl + Shift（及箭头键）	选择文本块<br>
+Ctrl + Esc	打开“开始”屏幕<br>
+Ctrl + Shift + Esc	打开任务管理器<br>
+Ctrl + Shift	如果多种键盘布局可用，则可切换键盘布局<br>
+Ctrl + 空格键	打开或关闭的中文输入法编辑器 (IME)<br>
+Shift + F10	显示所选项目的快捷方式菜单<br>
+按 Shift 与任何箭头键	在窗口中或桌面上选择多个项目，或在文档中选择文本<br>
+Shift + Delete	删除选定项，无需先移动到回收站<br>
+向右键	打开右侧的下一个菜单，或打开子菜单<br>
+向左键	打开左侧的下一个菜单，或关闭子菜单<br>
+Esc	停止或离开当前任务</p>
+<h3 id="windows-徽标键键盘快捷方式"><a class="header-anchor" href="#windows-徽标键键盘快捷方式">¶</a>Windows 徽标键键盘快捷方式</h3>
+<p>按键	操作<br>
+Windows 徽标键 	打开或关闭“开始”屏幕<br>
+Windows 徽标键  + A	打开操作中心<br>
+Windows 徽标键  + B	将焦点放在通知区域上<br>
+Windows 徽标键  + C	<br>
+Windows 徽标键  + Shift + C	打开超级按钮菜单<br>
+Windows 徽标键  + D	显示和隐藏桌面<br>
+Windows 徽标键  + Alt + D	显示和隐藏桌面上的日期和时间<br>
+Windows 徽标键  + E	打开文件资源管理器<br>
+Windows 徽标键  + F	打开反馈中心并获取屏幕截图<br>
+Windows 徽标键  + G	打开游戏栏（当游戏处于打开状态时）<br>
+Windows 徽标键  + H	开始听写<br>
+Windows 徽标键  + I	打开“设置”<br>
+Windows 徽标键  + J</p>
+<h3 id="windows-徽标键键盘快捷方式-v2"><a class="header-anchor" href="#windows-徽标键键盘快捷方式-v2">¶</a>Windows 徽标键键盘快捷方式</h3>
+<p>Windows 徽标键  + K	打开“连接”快速操作<br>
+Windows 徽标键  + L	锁定你的电脑或切换帐户<br>
+Windows 徽标键  + M	最小化所有窗口<br>
+Windows 徽标键  + O	锁定设备方向<br>
+Windows 徽标键  + P	选择演示显示模式<br>
+Windows 徽标键  + R	打开“运行”对话框<br>
+Windows 徽标键  + S	打开“搜索”<br>
+Windows 徽标键  + T	循环浏览任务栏上的应用<br>
+Windows 徽标键  + U	打开“轻松使用设置中心”<br>
+Windows 徽标键  + V	循环浏览通知<br>
+Windows 徽标键  + Shift + V	以相反顺序循环浏览通知<br>
+Windows 徽标键  + X	打开“快速链接”菜单<br>
+Windows 徽标键  + Y	在 Windows Mixed Reality 与桌面之间切换输入<br>
+Windows 徽标键  + Z	以全屏模式显示应用中可用的命令<br>
+Windows 徽标键  + 句点 (.) 或分号 (😉	打开表情符号面板<br>
+Windows 徽标键  + 逗号 (,)	临时速览桌面<br>
+Windows 徽标键  + Pause 键	显示“系统属性”对话框<br>
+Windows 徽标键  + Ctrl + F	搜索电脑（如果已连接到网络）<br>
+Windows 徽标键  + Shift + M	还原桌面上的最小化窗口<br>
+Windows 徽标键  + 数字	打开桌面，然后启动固定到任务栏的应用（位于数字所指明的位置）。如果应用已处于运行状态，则切换至该应用。<br>
+Windows 徽标键  + Shift + 数字	打开桌面，然后启动固定到任务栏的应用新实例（位于数字所指明的位置）<br>
+Windows 徽标键  + Ctrl + 数字	打开桌面，然后切换至固定到任务栏的应用的最后活动窗口（位于数字所指明的位置）<br>
+Windows 徽标键  + Alt + 数字	打开桌面，然后打开固定到任务栏的应用的“跳转列表”（位于数字所指明的位置）<br>
+Windows 徽标键  + Ctrl + Shift + 数字	打开桌面，然后以管理员身份打开位于任务栏上指定位置的应用新实例<br>
+Windows 徽标键  + Tab	打开任务视图<br>
+Windows 徽标键  向上键	最大化窗口<br>
+Windows 徽标键  向下键	删除屏幕上的当前应用并最小化桌面窗口<br>
+Windows 徽标键  + 向左键	最大化屏幕左侧的应用或桌面窗口<br>
+Windows 徽标键  + 向右键	最大化屏幕右侧的应用或桌面窗口<br>
+Windows 徽标键  + Home	最小化活动桌面窗口之外的所有窗口（在第二个笔划时还原所有窗口）<br>
+Windows 徽标键  + Shift + 向上键	将桌面窗口拉伸至屏幕顶部和底部<br>
+Windows 徽标键  + Shift + 向下键	在垂直方向上还原/最小化活动桌面窗口，而宽度保持不变<br>
+Windows 徽标键  Shift + 向左键或向右键	将桌面上的应用或窗口从一台显示器移动至另一台显示器<br>
+Windows 徽标键  + 空格键	切换输入语言和键盘布局<br>
+Windows 徽标键  + Ctrl + 空格键	对之前选择的输入所做的更改<br>
+Windows 徽标键  + Ctrl + Enter	打开讲述人<br>
+Windows 徽标键 + 加号 (+)	打开放大镜<br>
+Windows 徽标键  + 正斜杠 (/)	开始输入法复原流程<br>
+Windows 徽标键  + Ctrl + V	打开肩式分接设备</p>
+<h3 id="虚拟桌面的键盘快捷方式"><a class="header-anchor" href="#虚拟桌面的键盘快捷方式">¶</a>虚拟桌面的键盘快捷方式</h3>
+<p>按键	操作<br>
+Windows 徽标键  + Tab	打开“任务视图”<br>
+Windows 徽标键  + Ctrl + D	添加虚拟桌面<br>
+Windows 徽标键  + Ctrl + 向右键	在你于右侧创建的虚拟桌面之间切换<br>
+Windows 徽标键  + Ctrl + 向左键	在你于左侧创建的虚拟桌面之间切换<br>
+Windows 徽标键  + Ctrl + F4	关闭你正在使用的虚拟桌面</p>
+<p>微软官方文档 <a href="https://support.microsoft.com/zh-cn/help/12445/windows-keyboard-shortcuts" target="_blank" rel="noopener">https://support.microsoft.com/zh-cn/help/12445/windows-keyboard-shortcuts</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/开发效率/" rel="tag"># 开发效率</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/09/20180709如何寻找电影资源/" rel="next" title="如何寻找电影资源--萌新必读">
+                <i class="fa fa-chevron-left"></i> 如何寻找电影资源--萌新必读
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzM2OS8xMzkwMw==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+</div>
+<!-- City版安装代码已完成 -->
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/logo.jpg"
+                alt="wudiplk" />
+            
+              <p class="site-author-name" itemprop="name">wudiplk</p>
+              <p class="site-description motion-element" itemprop="description">Change Is No Charge</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+          <div >
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=38358214&auto=0&height=66&width=280">
+              </iframe>
+          </div>
+          
+          
+
+          
+          
+
+          
+
+        </div>
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何添加androidstudio插件"><span class="nav-number">1.1.</span> <span class="nav-text">¶如何添加AndroidStudio插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#androidstudio常用的插件"><span class="nav-number">1.2.</span> <span class="nav-text">¶AndroidStudio常用的插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android-studio-常用快捷键"><span class="nav-number">1.3.</span> <span class="nav-text">¶Android Studio 常用快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录快捷键表"><span class="nav-number">1.4.</span> <span class="nav-text">¶附录快捷键表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ide"><span class="nav-number">1.4.1.</span> <span class="nav-text">¶IDE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑"><span class="nav-number">1.4.2.</span> <span class="nav-text">¶编辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.4.3.</span> <span class="nav-text">¶文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找"><span class="nav-number">1.4.4.</span> <span class="nav-text">¶查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构"><span class="nav-number">1.4.5.</span> <span class="nav-text">¶重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试"><span class="nav-number">1.4.6.</span> <span class="nav-text">¶调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用window-快捷键"><span class="nav-number">1.5.</span> <span class="nav-text">¶常用Window 快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复制-粘贴及其他常规的键盘快捷方式"><span class="nav-number">1.5.1.</span> <span class="nav-text">¶复制、粘贴及其他常规的键盘快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows-徽标键键盘快捷方式"><span class="nav-number">1.5.2.</span> <span class="nav-text">¶Windows 徽标键键盘快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows-徽标键键盘快捷方式-v2"><span class="nav-number">1.5.3.</span> <span class="nav-text">¶Windows 徽标键键盘快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟桌面的键盘快捷方式"><span class="nav-number">1.5.4.</span> <span class="nav-text">¶虚拟桌面的键盘快捷方式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+    </div>
+
+   <div>
+
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <meta http-equiv="Content-Type" content="text/html; charset="UTF-8" />
+<script  async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wudiplk</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_uv">
+  本站总访问量<span id="busuanzi_value_site_uv"></span>次
+</span>
+</div>
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://wudiplk.top/2018/07/26/如何利用AndroidStudio提升开发效率/';
+          this.page.identifier = '2018/07/26/如何利用AndroidStudio提升开发效率/';
+          this.page.title = '如何利用AndroidStudio提升开发效率';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
